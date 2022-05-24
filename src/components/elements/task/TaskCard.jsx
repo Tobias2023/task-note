@@ -70,7 +70,15 @@ export default function Task(props) {
           >
             Edit Task
           </button>
+          <button
+            type="button"
+            // onClick={openModal}
+            className="focus:outline-none text-white bg-red-700 hover:bg-red-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:focus:ring-yellow-900"
+          >
+            Delete Task
+          </button>
           {/* Modal Show/Hide */}
+        {/* TODO: PIN a task */} 
         </div>
       </div>
       <Modal
