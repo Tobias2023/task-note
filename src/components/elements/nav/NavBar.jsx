@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
-
-
+import Link from "next/link";
 
 export default function NavBar() {
   return (
@@ -9,7 +8,12 @@ export default function NavBar() {
       <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
         <div className="container flex flex-wrap justify-between items-center mx-auto">
           <a href="#" className="flex items-center">
-          <Image src="/logo.png" alt="TaskNote Logo" width={200} height={100} />
+            <Image
+              src="/logo.png"
+              alt="TaskNote Logo"
+              width={200}
+              height={100}
+            />
           </a>
           <div className="flex items-center md:order-2">
             <button
@@ -27,7 +31,7 @@ export default function NavBar() {
                 alt="user photo"
               />
             </button>
-          
+
             <div
               className="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
               id="dropdown"
@@ -115,45 +119,36 @@ export default function NavBar() {
           >
             <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
               <li>
-                <a
-                  href="#"
-                  className="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
-                  aria-current="page"
-                >
-                  Home
-                </a>
+                <Link href="/">
+                  <a
+                    href="#"
+                    className="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+                    aria-current="page"
+                  >
+                    Task List
+                  </a>
+                </Link>
               </li>
               <li>
+              <Link href="/about">
+
                 <a
                   href="#"
                   className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 >
                   About
                 </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  Services
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  Pricing
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  Contact
-                </a>
+                <Link href="/contact">
+                  <a
+                    href="#"
+                    className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >
+                    Contact
+                  </a>
+                </Link>
               </li>
             </ul>
           </div>
