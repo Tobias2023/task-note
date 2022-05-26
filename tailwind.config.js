@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: []
 }
 // https://tailwindcss.com/docs/configuration
 
